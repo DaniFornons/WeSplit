@@ -50,6 +50,7 @@ struct ContentView: View {
                 }
                 Section("total amount for the check"){
                     Text(totalAmount, format: .currency(code: Locale.current.currency?.identifier ?? "USD"))
+                        .foregroundStyle(tipPercentage==0 ? .red : .blue)
                 }
                 
                 Section("How much tip do you want to leave?") {
